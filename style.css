@@ -2,12 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'montserrat';
+    font-family: "montserrat";
     color: #fff;
 }
 html, body{
     width: 100%;
     height: 100%;
+}
+
+#cursor {
+    height: 25px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#blur {
+    height: 400px;
+    width: 400px;
+    background-color: #96c80b42;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index : 9;
 }
 
 #nav{
@@ -36,6 +55,7 @@ video {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: -1 ;
     position: fixed;
 }
 
@@ -47,5 +67,95 @@ video {
 #page1 {
     height: 100vh;
     width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+
+}
+
+#page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "EAT.DRINK.PLAY";
+    position: absolute;
+    color: #000;
+    top: -6+px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%; 
+    z-index: 10;  
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: None;
+}
+
+#scroller-in {
+
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll ;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#scroller h4:hover {
+    color: #95C11E;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
