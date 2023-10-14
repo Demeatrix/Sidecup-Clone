@@ -5,7 +5,9 @@
     font-family: "montserrat";
     color: #fff;
 }
-html, body{
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -13,7 +15,7 @@ html, body{
 #cursor {
     height: 25px;
     width: 20px;
-    background-color: #95C11E;
+    background-color: #95c11e;
     border-radius: 50%;
     position: fixed;
     z-index: 99;
@@ -26,10 +28,10 @@ html, body{
     border-radius: 50%;
     position: fixed;
     filter: blur(50px);
-    z-index : 9;
+    z-index: 9;
 }
 
-#nav{
+#nav {
     height: 145px;
     width: 100%;
     display: flex;
@@ -42,8 +44,7 @@ html, body{
 }
 
 #nav img {
-    height : 75px;
-
+    height: 75px;
 }
 
 #nav h4 {
@@ -55,7 +56,7 @@ video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: -1 ;
+    z-index: -1;
     position: fixed;
 }
 
@@ -74,7 +75,6 @@ video {
     flex-direction: column;
     text-align: center;
     z-index: 10;
-
 }
 
 #page1 h1 {
@@ -87,9 +87,9 @@ video {
     content: "EAT.DRINK.PLAY";
     position: absolute;
     color: #000;
-    top: -6+px;
+    top: -6 + px;
     left: -6px;
-    -webkit-text-stroke: 2px #95C11E;
+    -webkit-text-stroke: 2px #95c11e;
     z-index: -1;
 }
 
@@ -107,9 +107,9 @@ video {
 }
 
 #page2 {
-    height: 100vh;
-    width: 100%; 
-    z-index: 10;  
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
 }
 
 #scroller {
@@ -126,41 +126,41 @@ video {
 }
 
 #scroller-in {
-
     display: inline-block;
     white-space: nowrap;
-    animation-name: scroll ;
+    animation-name: scroll;
     animation-duration: 25s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite; 
+    animation-iteration-count: infinite;
 }
 
 #scroller h4 {
     display: inline-block;
     font-size: 120px;
     font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     margin-right: 10px;
     transition: all linear 0.5s;
     color: transparent;
-    -webkit-text-stroke: 2px #95C11E;
+    -webkit-text-stroke: 2px #95c11e;
 }
 
 #scroller h4:hover {
-    color: #95C11E;
+    color: #95c11e;
 }
 
 @keyframes scroll {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
 }
 
 #about-us {
-    height : 40vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     padding: 0 50px;
@@ -180,17 +180,58 @@ video {
 #about-us-in {
     width: 40%;
     text-emphasis: after;
-    text-align : center;
+    text-align: center;
 }
 
 #about-us-in h3 {
     font-size: 50px;
     font-weight: 800px;
     margin-bottom: 20px;
-
 }
 
 #about-us-in p {
     font-size: 20px;
     line-height: 25px;
+}
+
+#cards {
+    /* background: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 24%;
+    /* background: blue; */
+    border-radius: 20px;
+    background-size: cover;
+}
+
+#card1 {
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1");
+}
+
+#card2 {
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C1024&ssl=1");
+}
+
+#card3 {
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1");
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding-top: 160px;
+}
+
+.overlay h4{
+    
 }
